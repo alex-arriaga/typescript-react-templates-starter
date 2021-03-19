@@ -1,0 +1,52 @@
+{
+  "name": "react-templates",
+  "version": "1.0.0",
+  "description": "A starter configuration for creating React templates with TypeScript. These templates could be rendered on the server or on the client.",
+  "main": "dist/cjs/index.js",
+  "typings": "dist/cjs/index.d.ts",
+  "module": "dist/esm/index.js",
+  "author": "Alex Arriaga <alex.arriaga@webtraining.world>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "typescript",
+    "react",
+    "boilerplate",
+    "starter",
+    "template",
+    "library",
+    "eslint",
+    "prettier"
+  ],
+  "devDependencies": {
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.21",
+    "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jest": "^24.3.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.2.1",
+    "react": "^17.0.1",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.3"
+  },
+  "scripts": {
+    "build": "npm-run-all -p build:*",
+    "build:cjs": "tsc -p tsconfig.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "clean": "rm -rf node_modules dist",
+    "format": "prettier '**/*.{ts,tsx,scss,md}' --write",
+    "lint": "eslint 'src/**/*.{ts,tsx}' '*.js'",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --collect-coverage --collect-coverage-from 'src/**'"
+  }
+}
