@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>React Templates</title>
+    <meta name="description" content="A React Templates demo">
+    <meta name="author" content="Alex Arriaga">
+    <style>
+        .tp {
+            border: 1px solid gray;
+            background: #efefef;
+            margin: 20px;
+            padding: 20px;
+        }
+        [data-rt-rehydrated="true"] {
+            border: 1px dashed red;
+        }
+    </style>
+</head>
+
+<body>
+<div id="root" class="tp">
+    Dynamic content to be replaced indicating a specific root element
+</div>
+
+<div data-rt-csr="true" data-rt-template-name="my-template" data-rt-template-version="1.0.0" class="tp">
+    Dynamic content using data attributes
+</div>
+
+<div data-rt-csr="true" data-rt-template-name="abc-template" data-rt-template-version="1.0.0" class="tp">
+    Dynamic content using data attributes
+</div>
+
+<div data-rt-rehydrate="true" data-rt-template-name="my-template" data-rt-template-version="1.0.0" class="tp">
+    <div>Hello this content will be rehydrated</div><div><button>Click me</button><p>This paragraph was NOT in the template</p></div>
+</div>
+
+<!--<script src="bundle/b.esm.js"></script>-->
+<script src="bundle/b.iife.js"></script>
+</body>
+</html>

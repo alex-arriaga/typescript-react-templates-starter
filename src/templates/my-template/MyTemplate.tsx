@@ -1,11 +1,21 @@
-import { ReactElement } from 'react'
+import { ReactElement, MouseEvent } from 'react'
 
 type Props = {
   message: string
 }
 
 const MyTemplate = ({ message }: Props): ReactElement => {
-  return <div>Hello {message}</div>
+  const handleClick = (e: MouseEvent) => {
+    console.log(`Click on ${e.target}`)
+  }
+  return (
+    <>
+      <div>Hello {message}</div>
+      <div>
+        <button onClick={handleClick}>Click me</button>
+      </div>
+    </>
+  )
 }
 
 export default MyTemplate
